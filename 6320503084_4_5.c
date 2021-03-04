@@ -2,11 +2,15 @@
 #include<string.h>
 int main ()
 {
-    int i,j=0,k,x,l,n,ar[2][2]= {{1,0},{0,0}};
+    int i,j=0,k,x,l,n,ar[2][2];
     char s[100];
     scanf("%d",&i);
     while(i>0)
     {
+        ar[0][0]=1;
+        ar[0][1]=0;
+        ar[1][0]=0;
+        ar[1][1]=0;
         scanf("%s",s);
         k=strlen(s);
         for(j=0; j<k; j++)
@@ -68,10 +72,6 @@ int main ()
             printf("4");
         }
         i--;
-        ar[0][0]=1;
-        ar[0][1]=0;
-        ar[1][0]=0;
-        ar[1][1]=0;
     }
 
     return 0;
