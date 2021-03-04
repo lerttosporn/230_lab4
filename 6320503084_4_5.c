@@ -3,10 +3,14 @@
 int main ()
 {
     int i,j=0,k,x,l,n,ar[2][2];
-    char s[100];
+    char s[50];
     scanf("%d",&i);
     while(i>0)
     {
+        if(i<1)
+        {
+            break;
+        }
         ar[0][0]=1;
         ar[0][1]=0;
         ar[1][0]=0;
