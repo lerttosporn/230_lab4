@@ -19,11 +19,11 @@ int main ()
         if(x==11||j==0)
         {
             printf("%c",toupper(q[0]));
-            q=strtok(NULL," ");
-            j=1;
         }
+        q=strtok(NULL," ");
+        j=1;
         x=0;
     }
-return 0;
+    return 0;
 }
 
