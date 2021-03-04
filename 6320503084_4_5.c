@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main ()
 {
-    int i,j=0,k,x,l,n,m;
+    int i,j=0,k,x,l,n,m=0;
     char s[100];
     scanf("%d",&i);
     while(i>0)
@@ -57,6 +57,7 @@ int main ()
             for(n=0; n<2; n++)
             {
                 if(ar[l][n]==1)
+                    printf("%d",ar[l][n]);
                     m++;
             }
         }
