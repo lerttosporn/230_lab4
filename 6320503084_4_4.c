@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<string.h>
+#include<ctype.h>
 int main ()
 {
     char s[1000],*q;
@@ -7,7 +8,7 @@ int main ()
     int i,j=0,x=0;
     scanf("%[^\n]s",s);
     q=strtok(s," ");
-    while(q!=NULL)
+    while(1)
     {
         for(i=0; i<11; i++)
         {
@@ -23,6 +24,10 @@ int main ()
         }
         q=strtok(NULL," ");
         x=0;
+        if(q==NULL)
+        {
+            break;
+        }
     }
     return 0;
 }
