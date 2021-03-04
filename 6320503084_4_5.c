@@ -56,9 +56,12 @@ int main ()
         {
             for(n=0; n<2; n++)
             {
+                printf("%d",ar[l][n]);
                 if(ar[l][n]==1)
-                    printf("%d",ar[l][n]);
+                {
                     m++;
+                }
+
             }
         }
         printf("%d",m);
