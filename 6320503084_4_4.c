@@ -20,9 +20,10 @@ int main ()
         {
             printf("%c",toupper(q[0]));
             q=strtok(NULL," ");
-            x=0;
+
             j=1;
         }
+        x=0;
     }
 return 0;
 }
