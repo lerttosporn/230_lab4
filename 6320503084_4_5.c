@@ -1,13 +1,12 @@
 #include<stdio.h>
+#include<string.h>
 int main ()
 {
-    int i,j=0,k,x,l,n,m=0;
+    int i,j=0,k,x,l,n,ar[2][2]= {{1,0},{0,0}};
     char s[100];
     scanf("%d",&i);
     while(i>0)
     {
-        int ar[2][2]= {{1,0},{0,0}};
-        ar[0][0]=1;
         scanf("%s",s);
         k=strlen(s);
         for(j=0; j<k; j++)
@@ -20,8 +19,8 @@ int main ()
             }
             if(s[j]=='B')
             {
-                x=ar[0][1];
-                ar[0][1]=ar[1][1];
+                x=ar[0][0];
+                ar[0][0]=ar[1][1];
                 ar[1][1]=x;
             }
             if(s[j]=='C')
@@ -52,20 +51,27 @@ int main ()
                 x=ar[0][1];
             }
         }
-        for(l=0; l<2; l++)
+        if(ar[0][0]==1)
         {
-            for(n=0; n<2; n++)
-            {
-                printf("%d",ar[l][n]);
-                if(ar[l][n]==1)
-                {
-                    m++;
-                }
-
-            }
+            printf("1");
         }
-        printf("%d",m);
+        if(ar[0][1]==1)
+        {
+            printf("2");
+        }
+        if(ar[1][0]==1)
+        {
+            printf("3");
+        }
+        if(ar[1][1]==1)
+        {
+            printf("4");
+        }
         i--;
+        ar[0][0]=1;
+        ar[0][1]=0;
+        ar[1][0]=0;
+        ar[1][1]=0;
     }
 
     return 0;
