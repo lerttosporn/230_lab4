@@ -4,12 +4,11 @@ int main ()
 {
     char s[1000],*q;
     char ch[12][5]= {"i","of","the","on","at","for","with","a","an","in","and"};
-    int i,j,x;
+    int i,j=0,x=0;
     scanf("%[^\n]s",s);
     q=strtok(s," ");
     while(q!=NULL)
     {
-        j=0;
         for(i=0; i<11; i++)
         {
             if(strcmp(q,ch[i]))
@@ -23,9 +22,8 @@ int main ()
             q=strtok(NULL," ");
             j=1;
         }
-
+        x=0;
     }
-
-}
 return 0;
 }
+
