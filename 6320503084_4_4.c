@@ -22,7 +22,6 @@ int main ()
             j=1;
         }
         q=strtok(NULL," ");
-
         x=0;
     }
     return 0;
